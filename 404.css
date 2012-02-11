@@ -1,0 +1,11 @@
+body {
+	background: #222;
+	color: #ff8;
+	font: 25px "Helvetica Neue", helvetica, arial, sans-serif;
+	width: 80%;
+	margin: 0 auto;
+}
+
+h2 {
+	font-family: monospace;
+}
