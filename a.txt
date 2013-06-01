@@ -1,2 +1,2 @@
-www.jegsmith.com - jegsmith.com
-mactoad.com, www.mactoad.com, marks.me, www.marks.me, marksme.com, www.marksme.com - markjs.net
+www.jegsmith.com -> jegsmith.com
+mactoad.com, www.mactoad.com, marks.me, www.marks.me, marksme.com, www.marksme.com -> markjs.net
