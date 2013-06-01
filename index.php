@@ -1,22 +1,22 @@
 <?php
 
-$f = file("a.txt");
-$u1 = $_SERVER['SERVER_NAME'];
-$u2 = trim($_SERVER['REQUEST_URI'], "/");
-$u = $u1."/".$u2;
+$file = file("a.txt");
+$server_host = $_SERVER['SERVER_NAME'];
+$server_request = trim($_SERVER['REQUEST_URI'], "/");
+$full_url = $server_host."/".$server_request;
 
-foreach ($f as $l) {
-	$l = explode("->", $l);
-	$a = explode(",", $l[0]);
-	$b = trim($l[1]);
+foreach ($file as $line) {
+  $line = explode("->", $line);
+	$locations = explode(",", $line[0]);
+	$destination = trim($line[1]);
 	
-	foreach ($a as $c) {
-		$c = trim($c);
-		if ($c == $u) {
-			header("Location: http://$b");
+	foreach ($locations as $location) {
+		$location = trim($location);
+		if ($location == $full_url) {
+			header("Location: http://$destination");
 		}
-		elseif ($c == $u1) {
-			header("Location: http://$b/$u2");
+		elseif ($location == $server_host) {
+			header("Location: http://$destination/$server_request");
 		}
 	}
 }
